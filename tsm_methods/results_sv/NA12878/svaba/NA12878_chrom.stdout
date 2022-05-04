@@ -1,0 +1,187 @@
+-----------------------------------------------------------
+--- Running svaba SV and indel detection on 1 threads ---
+---    (inspect *.log for real-time progress updates)   ---
+-----------------------------------------------------------
+***************************** PARAMS ****************************
+    DBSNP Database file: 
+    Max cov to assemble: 100
+    Error correction mode: f
+    Subsample-rate for correction learning: 0.500000
+    ErrorRate: EXACT (0)
+    Num assembly rounds: 3
+    Num reads to sample: 2000000
+    Discordant read extract SD cutoff:  3.92
+    Discordant cluster std-dev cutoff:  3.92
+    Minimum number of reads for mate lookup 3
+    LOD cutoff (non-REF):            8
+    LOD cutoff (non-REF, at DBSNP):  6
+    LOD somatic cutoff:              6
+    LOD somatic cutoff (at DBSNP):   10
+    BWA-MEM params:
+      Gap open penalty: 32
+      Gap extension penalty: 1
+      Mismatch penalty: 18
+      Aligment bandwidth: 1000
+      Z-dropoff: 100
+      Clip 3 penalty: 5
+      Clip 5 penalty: 5
+      Reseed trigger: 1.5
+      Sequence match score: 2
+*****************************************************************
+
+BAM PARAMS FOR: t000--data_chrom/NA12878_GRCh38.bam
+@@@ READ GROUP 21225:21225:1:HMTTCCCXX:7 Insert Size: 355.849(117.024) [0.025%,97.5%] [152,742], Mean Coverage: 7 Read Length: 151 Max MapQ:60
+@@@ READ GROUP 21225:21225:1:HMTTCCCXX:5 Insert Size: 354.799(116.192) [0.025%,97.5%] [152,738], Mean Coverage: 7 Read Length: 151 Max MapQ:60
+@@@ READ GROUP 21225:21225:1:HMTTCCCXX:3 Insert Size: 355.035(116.167) [0.025%,97.5%] [152,736], Mean Coverage: 8 Read Length: 151 Max MapQ:60
+@@@ READ GROUP 21225:21225:1:HMTTCCCXX:2 Insert Size: 355.346(115.355) [0.025%,97.5%] [152,732], Mean Coverage: 8 Read Length: 151 Max MapQ:60
+@@@ READ GROUP 21225:21225:1:HMTTCCCXX:6 Insert Size: 355.977(117.294) [0.025%,97.5%] [152,746], Mean Coverage: 7 Read Length: 151 Max MapQ:60
+@@@ READ GROUP 21225:21225:1:HMTTCCCXX:1 Insert Size: 355.47(115.441) [0.025%,97.5%] [152,744], Mean Coverage: 7 Read Length: 151 Max MapQ:60
+@@@ READ GROUP 21225:21225:1:HMTTCCCXX:4 Insert Size: 355.147(116.667) [0.025%,97.5%] [152,742], Mean Coverage: 7 Read Length: 151 Max MapQ:60
+@@@ READ GROUP 21225:21225:1:HMTTCCCXX:8 Insert Size: 350.353(113.156) [0.025%,97.5%] [152,718], Mean Coverage: 8 Read Length: 151 Max MapQ:60
+ min_dscrd_size_for_variant 815
+...min discordant-only variant size 815
+...found read length of 151. Min Overlap is 90
+...max read MAPQ detected: 60
+
+...calculated seed size for error rate of 0.000000 and read length 151 is 90
+...loading the human reference sequence for BWA
+[M::bwa_idx_load_from_disk] read 3171 ALT contigs
+...running on 6 chunks
+
+JSON script is empty. Setting default to filter all reads
+----------ReadFilterCollection-------------
+------------------------------------------
+--- Loaded non-read data. Starting detection pipeline
+	Opening ref genome for thread 0
+	Opening BAMs for thread 0
+Running region 1:25,002,240-25,002,524(*) on thread 140585424811776
+...mate region 1:25,001,718-25,002,238(*) case read count that triggered lookup: 68 on mate-lookup round 1
+...mate region 1:25,002,554-25,003,095(*) case read count that triggered lookup: 27 on mate-lookup round 1
+	Total of 0 bad mate regions for this thread
+...discordant read clustering
+Doing assemblies on 1:25,002,240-25,002,524(*)
+...BFC attempted correct 619 train: 753 kcov: 39.481159 kmer: 15
+...running assemblies for region 1:25,002,240-25,002,524(*)
+...assembled 22 contigs for results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524
+...aliging contigs to genome
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524_21C will be analysed
+10 0 0 0 0 2
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524_15C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524_15C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524_11C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524_11C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524_11C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524_11C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524_11C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524_11C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524_11C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524_11C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524_7C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524_5C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524_5C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524_5C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524_5C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524_4C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_25002240_25002524_17C will be analysed
+...done assembling, post processing
+Ran chr1: 25,002,240- 25,002,524 | T:   214 N:     0 C:    15 | R:  1% M:  0% T:  2% C:  2% A: 93% P:  0% | CPU:    0m24s Wall:    0m07s
+Running region 1:42,904,851-42,904,857(*) on thread 140585424811776
+...mate region 1:42,903,995-42,904,843(*) case read count that triggered lookup: 22 on mate-lookup round 1
+...mate region 1:42,904,891-42,905,403(*) case read count that triggered lookup: 24 on mate-lookup round 1
+	Total of 0 bad mate regions for this thread
+...discordant read clustering
+Doing assemblies on 1:42,904,851-42,904,857(*)
+...BFC attempted correct 529 train: 622 kcov: 41.109459 kmer: 15
+...running assemblies for region 1:42,904,851-42,904,857(*)
+...assembled 20 contigs for results/NA12878/svaba/NA12878_chrom.c_1_42904851_42904857
+...aliging contigs to genome
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_42904851_42904857_10C will be analysed
+0 0 3 0 0 0
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_42904851_42904857_8C will be analysed
+0 0 3 0 0 0
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_42904851_42904857_11C matches the reference
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_42904851_42904857_2C will be analysed
+...done assembling, post processing
+Ran chr1: 42,904,851- 42,904,857 | T:    47 N:     0 C:    14 | R:  5% M: 10% T: 14% C: 15% A: 53% P:  0% | CPU:    0m25s Wall:    0m08s
+Running region 1:43,911,614-43,911,634(*) on thread 140585424811776
+...mate region 1:43,910,902-43,911,611(*) case read count that triggered lookup: 33 on mate-lookup round 1
+...mate region 1:43,911,648-43,912,567(*) case read count that triggered lookup: 27 on mate-lookup round 1
+	stopping read lookup at 1:43,912,548(+) in window 1:43,911,648-43,912,567(*) with 401 weird reads. Limit: 400
+	Total of 1 bad mate regions for this thread
+...discordant read clustering
+Doing assemblies on 1:43,911,614-43,911,634(*)
+...BFC attempted correct 307 train: 753 kcov: 38.526531 kmer: 15
+...running assemblies for region 1:43,911,614-43,911,634(*)
+...assembled 8 contigs for results/NA12878/svaba/NA12878_chrom.c_1_43911614_43911634
+...aliging contigs to genome
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_43911614_43911634_7C will be analysed
+28 0 0 0 0 0
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_43911614_43911634_4C will be analysed
+0 0 5 0 0 0
+...done assembling, post processing
+Ran chr1: 43,911,614- 43,911,634 | T:    63 N:     0 C:     5 | R:  1% M:  4% T: 22% C: 16% A: 55% P:  0% | CPU:    0m25s Wall:    0m08s
+Running region 1:201,549,678-201,549,683(*) on thread 140585424811776
+...mate region 1:201,548,920-201,549,664(*) case read count that triggered lookup: 31 on mate-lookup round 1
+...mate region 1:201,549,718-201,550,350(*) case read count that triggered lookup: 43 on mate-lookup round 1
+	stopping read lookup at 1:201,549,663(-) in window 1:201,548,920-201,549,664(*) with 401 weird reads. Limit: 400
+	Total of 2 bad mate regions for this thread
+...discordant read clustering
+Doing assemblies on 1:201,549,678-201,549,683(*)
+...BFC attempted correct 390 train: 882 kcov: 49.627419 kmer: 15
+...running assemblies for region 1:201,549,678-201,549,683(*)
+...assembled 8 contigs for results/NA12878/svaba/NA12878_chrom.c_1_201549678_201549683
+...aliging contigs to genome
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_201549678_201549683_6C will be analysed
+0 0 4 0 0 0
+...done assembling, post processing
+Ran chr1:201,549,678-201,549,683 | T:    86 N:     0 C:     6 | R:  3% M: 14% T: 19% C: 17% A: 45% P:  0% | CPU:    0m26s Wall:    0m09s
+Running region 1:219,336,031-219,336,032(*) on thread 140585424811776
+...mate region 1:219,335,218-219,336,030(*) case read count that triggered lookup: 12 on mate-lookup round 1
+...mate region 1:219,336,039-219,336,659(*) case read count that triggered lookup: 30 on mate-lookup round 1
+	stopping read lookup at 1:219,335,992(-) in window 1:219,335,218-219,336,030(*) with 401 weird reads. Limit: 400
+	Total of 3 bad mate regions for this thread
+...discordant read clustering
+Doing assemblies on 1:219,336,031-219,336,032(*)
+...BFC attempted correct 275 train: 728 kcov: 47.367462 kmer: 15
+...running assemblies for region 1:219,336,031-219,336,032(*)
+...assembled 14 contigs for results/NA12878/svaba/NA12878_chrom.c_1_219336031_219336032
+...aliging contigs to genome
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_219336031_219336032_5C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_219336031_219336032_5C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_219336031_219336032_8C will be analysed
+0 0 2 0 0 0
+...done assembling, post processing
+Ran chr1:219,336,031-219,336,032 | T:    47 N:     0 C:     7 | R:  1% M:  5% T: 22% C: 14% A: 55% P:  0% | CPU:    0m27s Wall:    0m10s
+Running region 1:222,138,709-222,138,785(*) on thread 140585424811776
+...mate region 1:222,137,911-222,138,706(*) case read count that triggered lookup: 94 on mate-lookup round 1
+...mate region 1:222,138,799-222,139,438(*) case read count that triggered lookup: 24 on mate-lookup round 1
+	stopping read lookup at 1:222,138,598(+) in window 1:222,137,911-222,138,706(*) with 401 weird reads. Limit: 400
+	stopping read lookup at 1:222,139,218(-) in window 1:222,138,799-222,139,438(*) with 401 weird reads. Limit: 400
+	Total of 5 bad mate regions for this thread
+...discordant read clustering
+Doing assemblies on 1:222,138,709-222,138,785(*)
+...BFC attempted correct 158 train: 991 kcov: 54.296104 kmer: 15
+...running assemblies for region 1:222,138,709-222,138,785(*)
+...assembled 7 contigs for results/NA12878/svaba/NA12878_chrom.c_1_222138709_222138785
+...aliging contigs to genome
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_222138709_222138785_6C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_222138709_222138785_6C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_222138709_222138785_6C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_222138709_222138785_3C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_222138709_222138785_3C will be analysed
+....fragment results/NA12878/svaba/NA12878_chrom.c_1_222138709_222138785_2C will be analysed
+...done assembling, post processing
+Ran chr1:222,138,709-222,138,785 | T:   165 N:     0 C:     3 | R:  2% M:  2% T: 11% C:  6% A: 75% P:  0% | CPU:    0m28s Wall:    0m11s
+...loading the bps files for conversion to VCF
+...making the primary VCFs (unfiltered and filtered) from file results/NA12878/svaba/NA12878_chrom.bps.txt.gz
+...vcf - reading in the breakpoints file
+...vcf sizeof empty VCFEntryPair 64 bytes 
+...read in 2 indels and 7 SVs 
+...vcf - deduplicating 7 events
+...dedupe at 0 of 7
+...hashing 2 indels for dedupe
+...done deduping indels
+...vcf - deduplicated down to 7 break pairs
+...writing unfiltered VCFs
+...writing filtered VCFs
+Done with SvABA

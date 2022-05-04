@@ -1,0 +1,1 @@
+c++ -O3 -Wall -shared -std=c++11 -fPIC -I/usr/include/python3.6m -I/usr/local/include/python3.6  -I/home/aloytyno/anaconda3/lib/python3.6/site-packages/pybind11/include fpa.cpp -o fpa_ext2.cpython-36m-x86_64-linux-gnu.so
