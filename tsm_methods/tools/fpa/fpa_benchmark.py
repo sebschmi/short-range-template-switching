@@ -24,6 +24,7 @@ for line in lines:
     inversion_length = random.randrange(15, 25)
     offset = random.randrange(length // 4, length // 4 * 3 - inversion_length)
     line2 = line[:offset] + line[offset:offset+inversion_length][::-1] + line[offset+inversion_length:]
+    lines2.append(line2)
 
 start_time = datetime.now()
 
