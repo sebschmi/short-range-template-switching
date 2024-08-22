@@ -5,3 +5,6 @@ python3.10 fpa_benchmark.py --length 250
 python3.10 fpa_benchmark.py --length 300
 python3.10 fpa_benchmark.py --length 350
 python3.10 fpa_benchmark.py --length 400
+python3.10 fpa_benchmark.py --length 600
+python3.10 fpa_benchmark.py --length 800
+python3.10 fpa_benchmark.py --length 1000
